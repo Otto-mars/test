@@ -31,7 +31,7 @@ void append(Node*& head, string kelime) {
 
 void undo(Node*& head) {
     if (head == nullptr) {
-        cout << "Geri alınacak kelime yok!" << endl;
+        cout << "Geri alinacak kelime yok!" << endl;
         return;
     }
     Node* gecici = head;
@@ -55,7 +55,7 @@ void display(Node* head) {
         if (gecici->sonraki != nullptr) cout << " -> ";
         gecici = gecici->sonraki;
     }
-    cout << " -> NULL" << endl;
+    cout << endl;
 }
 
 int main()
@@ -66,7 +66,7 @@ int main()
     string input;
 
     while (true) {
-        cout << "Kelime gir: ";
+        cout << "Kelime silmek icin UNDO yaziniz. Kelime gir: ";
         cin >> input;
 
         if (input == "EXIT") {
